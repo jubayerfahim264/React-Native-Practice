@@ -1,5 +1,6 @@
 import React from "react";
 import { View, TextInput, Button, StyleSheet } from "react-native";
+import MyImg from "../../assets/sylhetView.jpg";
 
 const InputList = (props) => {
   return (
@@ -19,9 +20,14 @@ const InputList = (props) => {
           } else {
             props.setList([
               ...props.List,
-              { key: Math.random().toString(), value: props.text },
+              {
+                key: Math.random().toString(),
+                value: props.text,
+                image: MyImg,
+              },
             ]);
           }
+          props.setText("");
         }}
       />
     </View>
